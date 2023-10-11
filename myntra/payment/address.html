@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="../Common Files/image/favicon.png">
+    <script src="https://kit.fontawesome.com/72215895a8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="address.css">
+    <title>Address | Checkout</title>
+</head>
+
+<body> 
+    <div id="upperbar">
+        <div>
+         <img src="../Common Files/image/myntra-removebg-preview.png" alt="brandLogo" id="landingPage">
+        </div>
+        <div>
+           <p> <span id="first">BAG </span>-------- <span id="second">ADDRESS</span>   --------- <span>PAYMENT</span></p>
+        </div>
+        <div>
+         <img src="https://constant.myntassets.com/checkout/assets/img/sprite-secure.png" alt="">
+        <span>100% SECURE</span>
+        </div>
+    </div>
+    <div id="cart">
+        <div id="div">
+            <div>
+                <h3>Select Delivery Address </h3>
+                <div>
+                    <h5>ADD NEW ADDRESS</h5>
+                </div>
+            </div>
+            <h5>DEFAULT ADDRESS</h5>
+            <div>
+                <div id="name">
+                    <div>
+                        <h4>Your Name</h4>
+                    </div>
+                    <div id="home">Home</div>
+                </div>
+                <p>YOUR ADDRESS <br>India,PIN-123456</p>
+                <p>Mobile No: <b>2314567898</b></p>
+                <p>Pay on Delivery</p>
+                <div id="option">
+                   <div>
+                       Remove
+                   </div> 
+                   <div>
+                       EDIT
+                   </div>
+                </div>
+            </div>
+            <div id="add">
+                 +Add New Address  
+            </div>
+        </div> 
+        <div id="checkDiv">
+           
+            <div id="itemDiv">
+                <h6 id="dhead">DELIVERY DATE :</h6>
+                <div id="deliveryDate">
+                
+                    Delivery date: <span id="delivery-date"></span>
+                  
+                </div>
+            </div>
+            <a href="payment.html"> <div id="place">
+            CONTINUE
+         </div></a>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+// Get Todays date
+$date = new Date();
+
+// Set the number of days to be added
+$numberOfDays = 5;
+
+// Add this to the current date
+$date.setDate($date.getDate() + $numberOfDays);
+
+// Optional: Pretty print the date
+function formatDate(date) {
+  var d = new Date(date),
+    month = '' + (d.getMonth() + 1),
+    day = '' + d.getDate(),
+    year = d.getFullYear();
+
+  if (month.length < 2) month = '0' + month;
+  if (day.length < 2) day = '0' + day;
+
+  return [day,month,year].join('-');
+}
+$date = formatDate($date);
+
+// Display the delivery date
+document.getElementById("deliveryDate").innerHTML = $date;
+
+
+    document.querySelector('img').addEventListener('click', function(){
+        window.location.href = "../Landingpage/index.html"
+    })
+
+document.getElementById('first').addEventListener('click', function(){
+window.location.href = "../wishlist/cart.html"
+})
+  document.getElementById('third').addEventListener('click', function(){
+  window.location.href = "../payment/payment.html"
+})
+</script>

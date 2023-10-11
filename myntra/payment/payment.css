@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+
+:root{
+    --primaryFont : 'DM Sans', sans-serif;
+    --charSpace : 6px; 
+    --primaryColor : #3e4152;
+    --secondaryColor : #fafbfc;
+}
+a:link{
+    text-decoration: none;
+}
+body{
+    font-family: var(--primaryFont);
+    scroll-behavior: smooth;
+}
+
+#upperbar{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #F5F5F6;
+    margin: 0px -8px;
+    color: gray;
+    align-items: center;
+    height: 79px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#upperbar >div{
+    height: 50px;
+    display: flex;
+   align-items: center;
+   margin: 5px 20px;
+   justify-content: space-between;
+
+}
+#upperbar >div>img{
+    height: 100%;
+    cursor: pointer;
+}
+#upperbar >div:first-child{
+    margin-left: 50px;
+}
+#upperbar >div:last-child{
+    margin-right: 50px;
+}
+#upperbar p > #first{
+    color: #14cda8;
+    border-bottom: 2px solid  #14cda8;
+    padding-bottom: 5px;
+}
+#upperbar p > *{
+    cursor: pointer;
+}
+
+/* end of navbar */
+
+
+#cart{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    justify-content: space-between;
+    padding:20px;
+}
+#main1{
+   width:65%;
+   padding:10px; 
+   border-right:2px solid #e9e9ed;
+}
+
+#main1>div:first-child{
+    
+    margin-top: 10px;
+    border:1px solid #e9e9ed;
+    padding: 0px 20px;
+}
+h4+p+p{
+    color: #ff3e6c;
+    text-align: center;
+}
+#payment{
+    border: 1px solid #e9e9ed;
+    display: flex;
+
+}
+#mode{
+    width: 40%;
+    margin-right: 30px;
+}
+#mode>div{
+    padding: 0px 10px;
+    display: flex;
+    border: 1px solid #e9e9ed;
+    align-items: center;
+    background-color: whitesmoke;
+}
+#mode>div:hover{
+    background-color: white;
+}
+i{
+    margin-right: 10px;
+}
+#infopay{
+    background-color: whitesmoke;
+    width: 80%;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-bottom: 40px;
+}
+#pay{
+    width: 80%;
+    height: 50px;
+    background-color:#ff3e6c;
+    display: flex;
+    align-items: center;
+    padding-left:30px;
+    color: white;
+    font-weight: bolder;
+}
+
+/* added same style from the cart page related to orderbox */
+
+.orderbox{
+    height: 200px;
+    width: 30%;
+    border :2px solid #F5F5F6;
+    margin-top: 80px;
+    margin-left: 50px;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.orderbox>div{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0px;
+    color: #535766;
+    
+}
+.filldiscount{
+    color:limegreen;
+}
+.pricedets,.amount{
+    border-bottom: 1px solid gray;
+    padding-bottom: 20px;
+}
+
+@media all and (min-width: 551px) and (max-width: 850px) {
+    #cart{
+        display: grid;
+        width: 80%;
+        margin: auto;
+        justify-content: space-between;
+        padding:20px;
+    }
+    #main1{
+        width:75%;
+        padding:10px; 
+        border-right:2px solid #e9e9ed;
+     }
+     
+.orderbox{
+    height: 200px;
+    width: 45%;
+    border :2px solid #F5F5F6;
+    margin-top: 80px;
+    margin-left: 50px;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+    #mode{
+        width: 43%;
+        margin-right: 30px;
+    }
+     
+    #mode>div{
+        padding: 0px 10px;
+        display: grid;
+        border: 1px solid #e9e9ed;
+        align-items: center;
+        background-color: whitesmoke;
+    }
+    #pay{
+        width: 70%;
+        height: 50px;
+        background-color:#ff3e6c;
+        display: flex;
+        align-items: center;
+        padding-left:30px;
+        color: white;
+        font-weight: bolder;
+    }
+    
+
+
+
+}
+@media all and (max-width: 551px)
+{
+    #cart{
+        display: grid;
+        width: 90%;
+        margin: auto;
+        justify-content: space-between;
+        padding:20px;
+    }
+    #main1{
+        width:85%;
+        padding:10px; 
+        border-right:2px solid #e9e9ed;
+     }
+     #mode{
+        width: 43%;
+        margin-right: 30px;
+    }
+     #mode>div{
+        padding: 0px 10px;
+        display: grid;
+        border: 1px solid #e9e9ed;
+        align-items: center;
+        background-color: whitesmoke;
+    }
+     
+.orderbox{
+    height: 200px;
+    width: 60%;
+    border :2px solid #F5F5F6;
+    margin-top: 80px;
+    margin-left: 50px;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+#pay{
+    width: 70%;
+    height: 50px;
+    background-color:#ff3e6c;
+    display: flex;
+    align-items: center;
+    padding-left:30px;
+    color: white;
+    font-weight: bolder;
+}
+#upperbar >div{
+    margin: 5px 5px;
+ 
+ }
+ #upperbar >div:first-child{
+     margin-left: 10px;
+ }
+ #upperbar >div:last-child{
+     margin-right: 10px;
+ }
+
+}
